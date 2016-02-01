@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript">
+        var map;
+        function setUp() {
+            map = new google.maps.Map(document.getElementById('map-canvas'), {
+                center: new google.maps.LatLng(51,17),
+                zoom: 4,
+                mapTypeId: google.maps.MapTypeId.TERRAIN,
+
+                styles: [{
+                    "featureType": "administrative.neighborhood",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {}]
+            });
+            var world_geometry = new google.maps.FusionTablesLayer({
+                styles: [
+                {
+                    where: "ISO_2DIGIT IN (" + visited_countries + ")",
+                    polygonOptions: {
+                        fillColor: "#00ff00",
+                    }
+                },
+                {
+                    where: "ISO_2DIGIT IN (" + planned_countries + ")",
+                    polygonOptions: {
+                        fillColor: "#ffff00",
+                    }
+                },
+                ],
+                query: {
+                    select: 'geometry',
+                    from: '1N2LBk4JHwWpOY4d9fobIn27lfnZ5MDy-NoqqRpk',
+                    where: "ISO_2DIGIT IN (" + visited_countries + ", " + planned_countries + ")",
+                },
+                map: map,
+                suppressInfoWindows: true
+            });
+
+            var image = { url: 'marker.png', size: new google.maps.Size(8, 8) };
+            for (var i = 0; i < visited_cities.length; i++) {
+                var marker = new google.maps.Marker({
+                    position: {lat: visited_cities[i][0], lng: visited_cities[i][1]},
+                    map: map,
+                    icon: image,
+                });
+            }
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=setUp">
+    </script>
+</head>
+<body>
+    <div id="map-canvas" style="width: calc(100% - 0px); height: 95vh;">
+    </div>
+</body>
+</html>

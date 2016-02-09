@@ -17,6 +17,7 @@ var visited_cities = [
     [15.508177, 119.969781, "Zambales"],
     [38.722252, -9.139337, "Lisbon"],
     [40.640506, -8.653754, "Aveiro"],
-    [51.0, 17.5, "Wrocław"]
+    [51.0, 17.5, "Wrocław"],
+    [50.2824265, 17.4526572, "Pokrzywna"]
 ];
-var planned_countries = "'FI', 'EE'";
+var planned_countries = "'IT'";

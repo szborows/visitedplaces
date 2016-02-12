@@ -11,24 +11,11 @@
                 mapTypeId: google.maps.MapTypeId.TERRAIN,
 
                 styles: [{
-                    "featureType": "administrative.neighborhood",
                     "elementType": "labels",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative.locality",
-                    "elementType": "labels",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {}]
+                    "stylers": [
+                      { "visibility": "off" }
+                    ]
+                }]
             });
             var world_geometry = new google.maps.FusionTablesLayer({
                 styles: [

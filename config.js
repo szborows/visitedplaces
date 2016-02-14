@@ -1,4 +1,4 @@
-var visited_countries = "'PL', 'DE', 'CZ', 'HU', 'FR', 'GB', 'PH', 'NL', 'ES', 'TN', 'TR', 'PT'";
+var visited_countries = "'PL', 'DE', 'CZ', 'HU', 'FR', 'GB', 'PH', 'NL', 'ES', 'TN', 'TR', 'PT', 'IT'";
 var visited_cities = [
     [51.312711, 9.479746, "Kassel"],
     [52.540308, 7.329286, "Lingen (Ems)"],
@@ -54,4 +54,4 @@ var visited_cities = [
     [49.9745484, 20.5936559, "Brzesko"],
 
 ];
-var planned_countries = "'IT'";
+var planned_countries = "'NZ'";

@@ -54,6 +54,7 @@ var visited_cities = [
     [49.9745484, 20.5936559, "Brzesko"],
 
     [41.9052493, 12.495867, "Rome"],
+    [41.7249036, 12.2869983, "Rome-Lido"],
 
 ];
 var planned_countries = "'NZ'";

@@ -1,4 +1,4 @@
-var visited_countries = "'PL', 'DE', 'CZ', 'HU', 'FR', 'GB', 'PH', 'NL', 'ES', 'TN', 'TR', 'PT', 'IT'";
+var visited_countries = "'PL', 'DE', 'CZ', 'HU', 'FR', 'GB', 'PH', 'NL', 'ES', 'TN', 'TR', 'PT', 'IT', 'FI'";
 var visited_cities = [
     [51.312711, 9.479746, "Kassel"],
     [52.540308, 7.329286, "Lingen (Ems)"],
@@ -53,9 +53,12 @@ var visited_cities = [
     [53.8241436, 22.3250444, "Ełk"],
     [50.0261936, 20.9418868, "Tarnów"],
     [49.9745484, 20.5936559, "Brzesko"],
+    [50.6623794, 18.265419, "Krasiejów"],
 
     [41.9052493, 12.495867, "Rome"],
     [41.7249036, 12.2869983, "Rome-Lido"],
 
+    [60.2096447, 24.6566028, "Espoo"],
+
 ];
-var planned_countries = "'NZ'";
+var planned_countries = "'SK'";
